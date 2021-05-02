@@ -1,11 +1,11 @@
 <div class="editor-wrapper">
     <div class="header-wrapper">
         <img class="logo" (click)="home()" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48px' height='48px'%3E%3Cpath fill='%232196f3' d='M37,45H11c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h19l10,10v29C40,43.657,38.657,45,37,45z'/%3E%3Cpath fill='%23bbdefb' d='M40 13L30 13 30 3z'/%3E%3Cpath fill='%231565c0' d='M30 13L40 23 40 13z'/%3E%3Cpath fill='%23e3f2fd' d='M15 23H33V25H15zM15 27H33V29H15zM15 31H33V33H15zM15 35H25V37H15z'/%3E%3C/svg%3E">
-        <span>{{title}}</span>
+        <input [(ngModel)] ="doc.title"/>
     </div>
     <ckeditor class="editor" 
-        [(ngModel)]="qwert">
+        [(ngModel)]="doc.content">
     </ckeditor>
-    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-primary" (click)="saveDoc(doc)">Save</button>
 </div>
 
