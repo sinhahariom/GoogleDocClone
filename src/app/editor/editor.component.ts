@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
@@ -6,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditorComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router : Router) { }
 
   ngOnInit(): void {
   }
   public qwert :any = "The first Text";
+  public title :any = "My Doc";
+  
+  home(){
+    this.router.navigateByUrl('/');
+  }
 }
